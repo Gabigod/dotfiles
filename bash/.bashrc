@@ -12,4 +12,5 @@ alias bye='shutdown -P now'
 
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
-[[ ${BLE_VERSION-} ]] && ble-attach
+#[[ ${BLE_VERSION-} ]] && ble-attach
+(cat ~/.cache/wal/sequences &)
