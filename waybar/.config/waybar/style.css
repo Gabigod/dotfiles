@@ -1,215 +1,107 @@
-@import url('/home/gabriel/.cache/wal/colors-waybar.css');
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 1);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color dark-6 rgba(82, 82, 91, 1);
+@define-color dark-5 rgba(113, 113, 122, 1);
 
 * {
-	font-size: 14px;
-	font-family: "CaskaydiaMono Nerd Font";
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 20px;
 }
 
 window#waybar {
-	all: unset;
-}
-
-.modules-left {
-	padding: 10px;
-	margin: 10px 10px 5px 10px;
-	border-radius: 10px;
-	background: alpha(@background, .6);
-	box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-}
-
-.modules-center {
-	padding: 7px;
-	margin: 10px 10px 5px 10px;
-	border-radius: 10px;
-	background: alpha(@background, .6);
-	box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-}
-
-.modules-right {
-	padding: 10px;
-	margin: 10px 15px 5px 0px;
-	border-radius: 10px;
-	background: alpha(@background, .6);
-	box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-}
-
-tooltip {
-	background: @background;
-	color: @color7;
-}
-
-#clock:hover,
-#custom-pacman:hover,
-#custom-notification:hover,
-#bluetooth:hover,
-#network:hover,
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#temperature:hover {
-	transition: all .3s ease;
-	color: @color9;
-}
-
-#custom-notification {
-	padding: 0px 5px;
-	transition: all .3s ease;
-	color: @color7;
-}
-
-#clock {
-	padding: 0px 5px;
-	color: @color7;
-	transition: all .3s ease;
-}
-
-#custom-pacman {
-	padding: 0px 5px;
-	transition: all .3s ease;
-	color: @color7;
-
-}
-
-#workspaces {
-	padding: 0px 5px;
+  background-color: @dark-9;
+  color: white;
 }
 
 #workspaces button {
-	all: unset;
-	padding: 0px 5px;
-	color: alpha(@color9, .4);
-	transition: all .2s ease;
-}
-
-#workspaces button:hover {
-	color: rgba(0, 0, 0, 0);
-	border: none;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-	transition: all 1s ease;
+  padding: 3px;
+  margin: 7px 0px 7px 7px;
+  background: transparent;
+  border-radius: 2px;
+  color: white;
 }
 
 #workspaces button.active {
-	color: @color9;
-	border: none;
-	text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  background: @highlight;
+  color: black;
+  font-weight: 700;
 }
 
-#workspaces button.empty {
-	color: rgba(0, 0, 0, 0);
-	border: none;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
-}
-
-#workspaces button.empty:hover {
-	color: rgba(0, 0, 0, 0);
-	border: none;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-	transition: all 1s ease;
-}
-
-#workspaces button.empty.active {
-	color: @color9;
-	border: none;
-	text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
-}
-
-#bluetooth {
-	padding: 0px 5px;
-	transition: all .3s ease;
-	color: @color7;
-
-}
-
-#network {
-	padding: 0px 10px;
-	transition: all .3s ease;
-	color: @color7;
-
-}
-
-#battery {
-	padding: 0px 5px;
-	transition: all .3s ease;
-	color: @color7;
-
-
-}
-
-#battery.charging {
-	color: #26A65B;
-}
-
-#battery.warning:not(.charging) {
-	color: #ffbe61;
-}
-
-#battery.critical:not(.charging) {
-	color: #f53c3c;
-	animation-name: blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-#group-expand {
-	padding: 0px 5px;
-	transition: all .3s ease;
-}
-
-#custom-expand {
-	padding: 0px 5px;
-	color: alpha(@foreground, .2);
-	text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
-	transition: all .3s ease;
-}
-
-#custom-expand:hover {
-	color: rgba(255, 255, 255, .2);
-	text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
-}
-
-#custom-colorpicker {
-	padding: 0px 5px;
-}
-
+#submap,
+#battery,
+#bluetooth,
+#network,
 #cpu,
 #memory,
-#temperature {
-	padding: 0px 5px;
-	transition: all .3s ease;
-	color: @color7;
-
+#volume {
+  border-radius: 8px;
+  padding: 5px 8px;
+  background: @dark-8;
+  margin: 5px 10px 5px 0px;
 }
 
-#custom-endpoint {
-	color: transparent;
-	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
-
+#submap,
+#workspaces button.urgent {
+  background: rgba(227, 81, 73, 1);
+  color: black;
 }
 
-#tray {
-	padding: 0px 5px;
-	transition: all .3s ease;
-
+#pulseaudio-slider {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 8px;
 }
 
-#tray menu * {
-	padding: 0px 5px;
-	transition: all .3s ease;
+#pulseaudio-slider slider {
+  all: unset;
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
 }
 
-#tray menu separator {
-	padding: 0px 5px;
-	transition: all .3s ease;
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 75px;
+  border-radius: 5px;
+  background: @dark-7;
 }
 
-#mpris {
-	padding: 0 10px;
-	color: #1DB954;
-	/* Cor verde do Spotify */
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background: @highlight;
 }
 
-#mpris.paused {
-	color: #9399B2;
+#media {
+  color: #42ff9f;
+  margin: 7px 0px 7px 80px;
+}
+
+#custom-media-animation {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+#custom-media-now-playing {
+  margin-right: 10px;
+}
+
+#custom-media-time {
+  color: @dark-5;
+  font-size: 14px;
+}
+
+tooltip {
+  background: @dark-9;
+  border-radius: 5px;
+}
+
+tooltip label {
+  color: white;
 }
