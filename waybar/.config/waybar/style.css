@@ -1,9 +1,10 @@
-@define-color highlight rgba(117, 241, 250, 1);
-@define-color dark-9 rgba(24, 24, 27, 1);
-@define-color dark-8 rgba(39, 39, 42, 1);
-@define-color dark-7 rgba(63, 63, 70, 1);
-@define-color dark-6 rgba(82, 82, 91, 1);
-@define-color dark-5 rgba(113, 113, 122, 1);
+@import url("../../.cache/wal/colors-waybar.css");
+/* @define-color highlight rgba(117, 241, 250, 1); */
+/* @define-color dark-9 rgba(24, 24, 27, 1); */
+/* @define-color dark-8 rgba(39, 39, 42, 1); */
+/* @define-color dark-7 rgba(63, 63, 70, 1); */
+/* @define-color dark-6 rgba(82, 82, 91, 1); */
+/* @define-color dark-5 rgba(113, 113, 122, 1); */
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -12,8 +13,8 @@
 }
 
 window#waybar {
-  background-color: @dark-9;
-  color: white;
+  background-color: alpha(@background, 0.7);
+  color: @foreground;
 }
 
 #workspaces button {
@@ -25,8 +26,8 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background: @highlight;
-  color: black;
+  background: @color1;
+  color: @color0;
   font-weight: 700;
 }
 
@@ -39,7 +40,7 @@ window#waybar {
 #volume {
   border-radius: 8px;
   padding: 5px 8px;
-  background: @dark-8;
+  background: @color8;
   margin: 5px 10px 5px 0px;
 }
 
@@ -69,17 +70,17 @@ window#waybar {
   min-height: 8px;
   min-width: 75px;
   border-radius: 5px;
-  background: @dark-7;
+  background: @color2;
 }
 
 #pulseaudio-slider highlight {
   min-width: 10px;
   border-radius: 5px;
-  background: @highlight;
+  background: @color1;
 }
 
 #media {
-  color: #42ff9f;
+  color: @color5;
   margin: 7px 0px 7px 80px;
 }
 
@@ -93,12 +94,12 @@ window#waybar {
 }
 
 #custom-media-time {
-  color: @dark-5;
+  color: @color8;
   font-size: 14px;
 }
 
 tooltip {
-  background: @dark-9;
+  background: @color7;
   border-radius: 5px;
 }
 
