@@ -173,3 +173,20 @@ hl.layer_rule({
 	ignore_alpha = 0.3,
 })
 
+-- Window rule for Qalculate - floating with smaller size
+hl.window_rule({
+	name = "qcalculate-float",
+	match = { class = "io.github.Qalculate.qalculate-qt" },
+	float = true,
+	size = { 800, 900 },
+	center = true,
+})
+
+-- Window rule for Qalculate GTK - floating with smaller size
+hl.window_rule({
+	name = "qalculate-gtk-float",
+	match = { class = "qalculate-gtk" },
+	float = true,
+	size = { 800, 900 },
+	center = true,
+})

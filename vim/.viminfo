@@ -1,0 +1,118 @@
+# Este arquivo viminfo foi gerado pelo Vim 9.2.
+# Você pode editá-lo se for cuidadoso!
+
+# Viminfo version
+|1,4
+
+# Valor de 'encoding' quando este arquivo foi escrito
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Histórico de Linha de comando (mais recente primeiro):
+:q
+|2,0,1782236301,,"q"
+:wq
+|2,0,1779800446,,"wq"
+
+# Histórico de expressões de busca (mais recente primeiro):
+
+# Histórico de expressões (mais recente primeiro):
+
+# Histórico de linha de entrada (mais recente primeiro):
+
+# Histórico de linha de debug (mais recente primeiro):
+
+# Registradores:
+""1	LINE	0
+	
+|3,1,1,1,1,0,1779800427,""
+"2	LINE	0
+	# Garante que as variáveis de ambiente do Wayland sejam exportadas para o D-Bus
+	exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+	
+	# Inicia o agente de autenticação polkit (necessário para permissões)
+	#exec-once = /usr/lib/polkit-kde-authentication-agent-1
+	
+	# Inicia o portal do Hyprland
+	exec-once = /usr/lib/xdg-desktop-portal-hyprland
+|3,0,2,1,8,0,1779800426,"# Garante que as variáveis de ambiente do Wayland sejam exportadas para o D-Bus","exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP","","# Inicia o agente de autenticação polkit (necessário para permissões)","#exec-once = /usr/lib/polkit-kde-authentication-agent-1","","# Inicia o portal do Hyprland","exec-once = /usr/lib/xdg-desktop-portal-hyprland"
+
+# Marcas nos arquivos:
+'0  167  17  ~/.config/hypr/hyprland.conf
+|4,48,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+
+# Lista de saltos (mais recente primeiro):
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  167  17  ~/.config/hypr/hyprland.conf
+|4,39,167,17,1779800446,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+-'  1  0  ~/.config/hypr/hyprland.conf
+|4,39,1,0,1779800385,"~/.config/hypr/hyprland.conf"
+
+# Histórico de marcas nos arquivos (mais recente primeiro):
+
+> ~/.config/hypr/hyprland.conf
+	*	1779800441	0
+	"	167	17
+	.	33	0
+	+	33	0

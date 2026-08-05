@@ -1,0 +1,13 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = gb.taffarel@gmail.com
+	name = Gabriel Barbosa Taffarel
+[core]
+	sshCommand = ssh -i ~/.ssh/id_hermes_pi -o IdentitiesOnly=yes
+[init]
+	defaultBranch = main

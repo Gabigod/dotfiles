@@ -19,7 +19,11 @@ hl.bind(
 -- Toggle do monitor mirror/extend
 hl.bind(mainMod .. " + ESCAPE", hl.dsp.exec_cmd("pgrep hyprlock && hyprctl dispatch dpms off"), { locked = true })
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("pgrep hyprlock && systemctl suspend"), { locked = true })
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pgrep hyprlock && systemctl poweroff || ~/.config/hypr/scripts/toggle_display.sh"), { locked = true })
+-- Toggle do monitor mirror/extend (quando tela NÃO está travada)
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle_display.sh"))
+
+-- Poweroff/Reboot/Menu (quando tela ESTÁ travada com hyprlock)
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("pgrep hyprlock && systemctl poweroff"), { locked = true })
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pgrep hyprlock && systemctl reboot || " .. menu), { locked = true })
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
@@ -99,3 +103,6 @@ hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+
+-- Calculator key (XF86Calculator) - opens qalculate-gtk
+hl.bind("XF86Calculator", hl.dsp.exec_cmd("qalculate-qt"))

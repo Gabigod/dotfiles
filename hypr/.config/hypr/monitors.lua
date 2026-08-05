@@ -5,14 +5,14 @@ hl.monitor({
 	scale = "auto",
 })
 
--- Fallback para HDMI-A-1
-hl.monitor({
-	output = "HDMI-A-1",
-	mode = "1600x1200@60",
-	position = "0x0",
-	scale = "1.0",
-	-- mirror = "eDP-1",
-})
+-- -- Fallback para HDMI-A-1
+-- hl.monitor({
+-- 	output = "HDMI-A-1",
+-- 	mode = "auto",
+-- 	position = "0x0",
+-- 	scale = "1.0",
+-- 	-- mirror = "eDP-1",
+-- })
 
 hl.monitor({
 	output = "eDP-1",
@@ -50,5 +50,13 @@ hl.window_rule({
 	match = { class = "org.pulseaudio.pavucontrol" },
 	float = true,
 	size = "900 600",
+	center = true,
+})
+
+hl.window_rule({
+	name = "qalculate-gtk-float",
+	match = { class = "qalculate-gtk" },
+	float = true,
+	size = "500 600",
 	center = true,
 })
