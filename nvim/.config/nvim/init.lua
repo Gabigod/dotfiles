@@ -1,6 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("config.options")
+require("config.filetypes")
 require("config.keymaps")
 --
 -- Força o fundo a ficar transparente

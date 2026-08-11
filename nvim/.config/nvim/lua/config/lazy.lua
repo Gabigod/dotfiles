@@ -20,7 +20,7 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     { import = "plugins" },
-    -- overseer templates customizados (PlatformIO, etc.)
+    -- overseer templates customizados (PlatformIO + HDL: Icarus, Verilator, GHDL, QuestaSim, UVM)
     { import = "plugins.overseer-pio" },
   },
   defaults = {
