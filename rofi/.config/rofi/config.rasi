@@ -8,6 +8,8 @@ configuration {
     display-run: " ";
     display-window: " ";
     
+    terminal: "kitty";
+    
     // Vim-like navigation bindings
     kb-row-up: "Up,Control+k,Control+p";
     kb-row-down: "Down,Control+j,Control+n";

@@ -1,5 +1,5 @@
 export COLORTERM=truecolor
-[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
+[[ $- == *i* && -t 0 ]] && source /usr/share/blesh/ble.sh --noattach
 
 alias ls='exa --icons --group-directories-first'
 alias ll='ls -l'
@@ -12,7 +12,8 @@ alias grep='grep --color=auto'
 alias bye='shutdown -P now'
 alias py='venv/bin/python3.14'
 alias ir='linux-enable-ir-emitter run'
-alias obsidian-sync='/usr/sbin/rclone bisync --track-renames /home/gabriel/Documentos/ECP/ gdrive:ECP --exclude-from /home/gabriel/Documentos/ECP/.exclude.txt --log-file=/home/gabriel/rclone.log -v'
+alias obsidian-sync='/usr/bin/flock -w 1800 /tmp/rclone-bisync.lock /usr/sbin/rclone bisync --track-renames /home/gabriel/Documentos/ECP/ gdrive:ECP --exclude-from /home/gabriel/Documentos/ECP/.exclude.txt --log-file=/home/gabriel/rclone.log -v'
+alias search='yay -Ss | grep'
 
 # agiliza a compilação com pandoc para PDF
 pdoc() {
@@ -51,7 +52,11 @@ eval "$(starship init bash)"
 (cat ~/.cache/wal/sequences &)
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-[[ ${BLE_VERSION-} ]] && ble-attach
+[[ ${BLE_VERSION-} && -t 0 ]] && ble-attach
 
 # Added by Antigravity CLI installer
 export PATH="/home/gabriel/.local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:${LD_LIBRARY_PATH}"
+
+export QSYS_ROOTDIR="/home/gabriel/.cache/yay/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/25.1/quartus/sopc_builder/bin"
+

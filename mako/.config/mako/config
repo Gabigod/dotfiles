@@ -1,0 +1,22 @@
+# Mako notification configuration
+
+# General
+sort=-time
+layer=top
+anchor=top-right
+max-visible=5
+
+# Timeout (3 seconds)
+default-timeout=3000
+ignore-timeout=1
+
+# Urgency overrides
+[urgency=low]
+default-timeout=3000
+
+[urgency=normal]
+default-timeout=3000
+
+[urgency=critical]
+default-timeout=0
+ignore-timeout=0
